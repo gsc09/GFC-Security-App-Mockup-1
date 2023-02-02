@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../2/styles.css">
+        <script type="text/javascript" src="../2/javascript/script.js"></script>
+        <link rel="icon" type="image/x-icon" href="../2/assets/logo.png">
+        <title>App Access - 2</title>
+    </head>
+    <body>
+        <div class="header-bar">
+            <div class="header-branding">
+                <img class="logo" src="../2/assets/logo_gray.png" title="Hello" />
+                <h1 class="site-header">App Access 2</h1>
+                
+            </div>
+            <nav class="header-nav">
+                <a title="Users" class="navbar__active" href="../2/users.html">
+                    Users
+                </a>
+                <a title="Permissions" href="../2/permissions.html">
+                    Permissions
+                </a>
+                <a title="Applications" href="../2/applications.html">
+                    Applications
+                </a>
+            </nav>
+            <div class="header-account-actions">
+                <span class="username" title="Logged in as Bilbo Baggins">Bilbo Baggins</span>
+                <a class="logoutBtn" title="Log out" href="#"></a>
+            </div>
+        </div>
+        
+        <div class="content">
+
+            <div class="content-header">
+                <a class="cancel-btn" type="button" href="../2/users.html">Cancel</a>
+                <a class="save-btn" type="button" href="../2/users.html">Save</a>
+                <a class="delete-btn" type="button" href="../2/users.html">Delete</a>
+            </div>
+
+            <div class="content-title">
+                <h3>Bilbo Baggins</h3>
+                <h4>bbaggins</h4>
+            </div>
+
+            <div class="content-body content-body__user-edit">
+                <div class="user-edit__nav">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="" class="apps-edit__nav__active">Gateway</a>
+                            </li>
+                            <li>
+                                <a href="">Sales Order Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="">GFC Dashboards</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="apps-edit__permassign">
+
+                    <div class="apps-edit__all-perms">
+                        <h3>All Permissions</h3>
+                    
+                        <div class="apps-edit__all-perms__dragover" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                            <div class="permgroup" id="permgroup1" draggable="true" ondragstart="drag(event)">
+                                <div class="collapsible">
+                                    <input id="collapsible1" class="toggle" type="checkbox">
+                                    <label for="collapsible1" class="lbl-toggle" tabindex="0">Gateway Scheduler</label>
+                                    <div class="collapsible-content">
+                                        <div class="content-inner">
+                                            <ul>
+                                                <li>Add event</li>
+                                                <li>Delete event</li>
+                                                <li>Edit event</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="permgroup" id="permgroup2" draggable="true" ondragstart="drag(event)">
+                                <div class="collapsible">
+                                    <input id="collapsible2" class="toggle" type="checkbox">
+                                    <label for="collapsible2" class="lbl-toggle" tabindex="0">DIT Summary</label>
+                                    <div class="collapsible-content">
+                                        <div class="content-inner">
+                                            <ul>
+                                                <li>View</li>
+                                                <li>Edit</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="permgroup" id="permgroup3" draggable="true" ondragstart="drag(event)">
+                                <div class="collapsible">
+                                    <input id="collapsible3" class="toggle" type="checkbox">
+                                    <label for="collapsible3" class="lbl-toggle" tabindex="0">Contracts</label>
+                                    <div class="collapsible-content">
+                                        <div class="content-inner">
+                                            <ul>
+                                                <li>Permission 1</li>
+                                                <li>Permission 2</li>
+                                                <li>Permission 3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="apps-edit__available-perms">
+                        <h3>Available Permissions</h3>
+
+                        <div class="apps-edit__available-perms__dragover" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

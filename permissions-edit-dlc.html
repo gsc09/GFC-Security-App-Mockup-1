@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../2/styles.css">
+        <script type="text/javascript" src="../2/javascript/script.js"></script>
+        <link rel="icon" type="image/x-icon" href="../2/assets/logo.png">
+        <title>App Access - 2</title>
+    </head>
+    <body>
+        <div class="header-bar">
+            <div class="header-branding">
+                <img class="logo" src="../2/assets/logo_gray.png" title="Hello" />
+                <h1 class="site-header">App Access 2</h1>
+                
+            </div>
+            <nav class="header-nav">
+                <a title="Users" href="../2/users.html">
+                    Users
+                </a>
+                <a title="Permissions" href="../2/permissions.html">
+                    Permissions
+                </a>
+                <a title="Applications" class="navbar__active" href="../2/applications.html">
+                    Applications
+                </a>
+            </nav>
+            <div class="header-account-actions">
+                <span class="username" title="Logged in as Bilbo Baggins">Bilbo Baggins</span>
+                <a class="logoutBtn" title="Log out" href="#"></a>
+            </div>
+        </div>
+        
+        <div class="content">
+
+            <div class="content-header">
+                <a class="cancel-btn" type="button" href="../2/applications.html">Cancel</a>
+                <a class="save-btn" type="button" href="../2/applications.html">Save</a>
+            </div>
+
+            <div class="content-body__edit-roles">
+                <h2>
+                    Gateway
+                </h2>
+
+                <div class="content-body__edit-roles__panels">
+                    <div class="edit-roles__users-panel">
+                        <div class="edit-roles__users-panel__header">
+                            <div class="search-name">
+                                <span>Name</span>
+                                <input type="text">
+                            </div>
+                            
+                            <div class="search-department">
+                                <span>Department</span>
+                                <input type="text">
+                            </div>
+            
+                            <div class="search-branch">
+                                <span>Branch</span>
+                                <select name="branch" id="search-branch-dropdown">
+                                    <option value="All">All</option>
+                                    <option value="Corporate">Corporate</option>
+                                    <option value="Madison">Madison</option>
+                                    <option value="Milwaukee">Milwaukee</option>
+                                    <option value="Chicagoland">Chicagoland</option>
+                                    <option value="Appleton">Appleton</option>
+                                    <option value="Terre Haute">Terre Haute</option>
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Ohio">Ohio</option>
+                                </select>
+                            </div>
+                        </div>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>Department</th>
+                                <th>Title</th>
+                                <th>Branch</th>
+                            </tr>
+                            <tr class="user-row__active">
+                                <td>Baggins, Bilbo</td>
+                                <td>bbaggins</td>
+                                <td>IS</td>
+                                <td>Business Systems Analyst</td>
+                                <td>Corporate</td>
+                            </tr>
+                            <tr>
+                                <td>Oakenshield, Thorin</td>
+                                <td>toakenshield</td>
+                                <td>Warehouse</td>
+                                <td>Warehouse Supervisor</td>
+                                <td>Terre Haute</td>
+                            </tr>
+                            <tr>
+                                <td>Thranduil</td>
+                                <td>thranduilisamazing</td>
+                                <td>Sales</td>
+                                <td>Senior Account Executive</td>
+                                <td>Chicagoland</td>
+                            </tr>
+                            <tr>
+                                <td>Smaug</td>
+                                <td>smaug</td>
+                                <td>Human Resources</td>
+                                <td>Human Resources Generalist</td>
+                                <td>Corporate</td>
+                            </tr>
+                            <tr>
+                                <td>Gandalf</td>
+                                <td>???</td>
+                                <td>???</td>
+                                <td>???</td>
+                                <td>???</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="edit-roles__roles-panel">
+                        <h3>Bilbo Baggins</h3>
+                        <div class="edit-roles__roles-panel__available-perms">
+                            <div class="edit-roles__permgroup">
+                                <div class="edit-roles__permgroup-collapsible">
+                                    <div class="permgroup" id="permgroup1">
+                                        <div class="collapsible">
+                                            <input id="collapsible1" class="toggle" type="checkbox">
+                                            <label for="collapsible1" class="lbl-toggle" tabindex="0">Gateway Scheduler</label>
+                                            <div class="collapsible-content">
+                                                <div class="content-inner">
+                                                    <ul>
+                                                        <li>
+                                                            <span>Add event</span>
+                                                            <input type="checkbox">
+                                                        </li>
+                                                        <li>
+                                                            <span>Delete event</span>
+                                                            <input type="checkbox">
+                                                        </li>
+                                                        <li>
+                                                            <span>Edit event</span>
+                                                            <input type="checkbox">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+
+                            <div class="edit-roles__permgroup">
+                                <div class="edit-roles__permgroup-collapsible">
+                                    <div class="permgroup" id="permgroup1">
+                                        <div class="collapsible">
+                                            <input id="collapsible2" class="toggle" type="checkbox">
+                                            <label for="collapsible2" class="lbl-toggle" tabindex="0">DIT Summary</label>
+                                            <div class="collapsible-content">
+                                                <div class="content-inner">
+                                                    <ul>
+                                                        <li>
+                                                            <span>View</span>
+                                                            <input type="checkbox">
+                                                        </li>
+                                                        <li>
+                                                            <span>Edit</span>
+                                                            <input type="checkbox">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+
+                            <div class="edit-roles__permgroup">
+                                <div class="edit-roles__permgroup-collapsible">
+                                    <div class="permgroup" id="permgroup1">
+                                        <div class="collapsible">
+                                            <input id="collapsible3" class="toggle" type="checkbox">
+                                            <label for="collapsible3" class="lbl-toggle" tabindex="0">Contracts</label>
+                                            <div class="collapsible-content">
+                                                <div class="content-inner">
+                                                    <ul>
+                                                        <li>
+                                                            <span>Permission 1</span>
+                                                            <input type="checkbox">
+                                                        </li>
+                                                        <li>
+                                                            <span>Permission 2</span>
+                                                            <input type="checkbox">
+                                                        </li>
+                                                        <li>
+                                                            <span>Permission 3</span>
+                                                            <input type="checkbox">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="checkbox">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

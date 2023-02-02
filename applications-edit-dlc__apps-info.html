@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../2/styles.css">
+        <script type="text/javascript" src="../2/javascript/script.js"></script>
+        <link rel="icon" type="image/x-icon" href="../2/assets/logo.png">
+        <title>App Access - 2</title>
+    </head>
+    <body>
+        <div class="header-bar">
+            <div class="header-branding">
+                <img class="logo" src="../2/assets/logo_gray.png" title="Hello" />
+                <h1 class="site-header">App Access 2</h1>
+                
+            </div>
+            <nav class="header-nav">
+                <a title="Users" href="../2/users.html">
+                    Users
+                </a>
+                <a title="Permissions" href="../2/permissions.html">
+                    Permissions
+                </a>
+                <a title="Applications" class="navbar__active" href="../2/applications.html">
+                    Applications
+                </a>
+            </nav>
+            <div class="header-account-actions">
+                <span class="username" title="Logged in as Bilbo Baggins">Bilbo Baggins</span>
+                <a class="logoutBtn" title="Log out" href="#"></a>
+            </div>
+        </div>
+        
+        <div class="content">
+
+            <div class="content-header">
+                <a class="cancel-btn" type="button" href="../2/applications.html">Cancel</a>
+                <a class="save-btn" type="button" href="../2/applications.html">Save</a>
+                <a class="delete-btn" type="button" href="../2/applications.html">Delete</a>
+            </div>
+
+            <div class=" content-body content-body__apps-edit">
+                <h2>
+                    Gateway
+                </h2>
+
+                <div class="apps-edit">
+                    <div class="apps-edit__nav">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="../2/applications-edit-dlc__apps-info.html" class="apps-edit__nav__active">Application Info</a>
+                                </li>
+                                <li>
+                                    <a href="../2/applications-edit-dlc__perm-groups.html">Permission Groups</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="apps-edit__editor">
+                        <div class="editor__format">
+                            <div class="editor__group">
+                                <span>Server</span>
+                                <input type="text">
+                            </div>
+                            
+                            <div class="editor__group">
+                                <span>URL</span>
+                                <input type="text" value="https://dlc.gflesch.com/">
+                            </div>
+                            
+                            <div class="editor__group">
+                                <span>Sandbox URL</span>
+                                <input type="text" value="https://dlc-test.gflesch.com/">
+                            </div>
+                            
+                            <div class="editor__group">
+                                <span>Description</span>
+                                <input type="text" value="Logistics workflow tool">
+                            </div>
+                        </div>
+
+                        <div class="disclaimer">
+                            <span>*Updating this information will not affect the actual web application</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

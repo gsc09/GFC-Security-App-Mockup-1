@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../2/styles.css">
+        <script type="text/javascript" src="../2/javascript/script.js"></script>
+        <link rel="icon" type="image/x-icon" href="../2/assets/logo.png">
+        <title>App Access - 2</title>
+    </head>
+    <body>
+        <div class="header-bar">
+            <div class="header-branding">
+                <img class="logo" src="../2/assets/logo_gray.png" title="Hello" />
+                <h1 class="site-header">App Access 2</h1>
+                
+            </div>
+            <nav class="header-nav">
+                <a title="Users" class="navbar__active" href="../2/users.html">
+                    Users
+                </a>
+                <a title="Permissions" href="../2/permissions.html">
+                    Permissions
+                </a>
+                <a title="Applications" href="../2/applications.html">
+                    Applications
+                </a>
+            </nav>
+            <div class="header-account-actions">
+                <span class="username" title="Logged in as Bilbo Baggins">Bilbo Baggins</span>
+                <a class="logoutBtn" title="Log out" href="#"></a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-header">
+                <div class="search-name">
+                    <span>Name</span>
+                    <input type="text">
+                </div>
+                
+                <div class="search-department">
+                    <span>Department</span>
+                    <input type="text">
+                </div>
+
+                <div class="search-branch">
+                    <span>Branch</span>
+                    <select name="branch" id="search-branch-dropdown">
+                        <option value="All">All</option>
+                        <option value="Corporate">Corporate</option>
+                        <option value="Madison">Madison</option>
+                        <option value="Milwaukee">Milwaukee</option>
+                        <option value="Chicagoland">Chicagoland</option>
+                        <option value="Appleton">Appleton</option>
+                        <option value="Terre Haute">Terre Haute</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Ohio">Ohio</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content-body">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Active Directory Username</th>
+                        <th class="hide-in-mobile">eA Employee #</th>
+                        <th>Department</th>
+                        <th>Title</th>
+                        <th>Branch</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>Baggins, Bilbo</td>
+                        <td>bbaggins</td>
+                        <td class="hide-in-mobile">108922</td>
+                        <td>IS</td>
+                        <td>Business Systems Analyst</td>
+                        <td>Corporate</td>
+                        <td>
+                            <a type="button" class="edit" href="../2/user-edit.html">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Oakenshield, Thorin</td>
+                        <td>toakenshield</td>
+                        <td class="hide-in-mobile">103673</td>
+                        <td>Warehouse</td>
+                        <td>Warehouse Supervisor</td>
+                        <td>Terre Haute</td>
+                        <td>
+                            <a type="button" class="edit" href="../2/user-edit.html">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Thranduil</td>
+                        <td>thranduilisamazing</td>
+                        <td class="hide-in-mobile">100524</td>
+                        <td>Sales</td>
+                        <td>Senior Account Executive</td>
+                        <td>Chicagoland</td>
+                        <td>
+                            <a type="button" class="edit" href="../2/user-edit.html">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Smaug</td>
+                        <td>smaug</td>
+                        <td class="hide-in-mobile">109320</td>
+                        <td>Human Resources</td>
+                        <td>Human Resources Generalist</td>
+                        <td>Corporate</td>
+                        <td>
+                            <a type="button" class="edit" href="../2/user-edit.html">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gandalf</td>
+                        <td>???</td>
+                        <td class="hide-in-mobile">???</td>
+                        <td>???</td>
+                        <td>???</td>
+                        <td>???</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
