@@ -6,22 +6,22 @@
         <link rel="stylesheet" href="../2/styles.css">
         <script type="text/javascript" src="../2/javascript/script.js"></script>
         <link rel="icon" type="image/x-icon" href="../2/assets/logo.png">
-        <title>App Permissions - 2</title>
+        <title>App Permissions</title>
     </head>
     <body>
         <div class="header-bar">
             <div class="header-branding">
                 <img class="logo" src="../2/assets/logo_gray.png" title="Hello" />
-                <h1 class="site-header">App Permissions 2</h1>
+                <h1 class="site-header">App Permissions</h1>
                 
             </div>
             <nav class="header-nav">
                 <a title="Users" href="../2/users.html">
                     Users
                 </a>
-                <a title="Permissions" href="../2/permissions.html">
+                <!-- <a title="Permissions" href="../2/permissions.html">
                     Permissions
-                </a>
+                </a> -->
                 <a title="Applications" class="navbar__active" href="../2/applications.html">
                     Applications
                 </a>
@@ -35,7 +35,9 @@
         <div class="content">
             
             <div class="content-header">
-                <a class="add-new" type="button" href="">+ Add Application</a>
+                <div class="header-left">
+                    <a class="add-new" type="button" href="">+ Add Application</a>
+                </div>
             </div>
 
             <div class="content-body">
@@ -46,7 +48,7 @@
                         <th>URL</th>
                         <th class="hide-in-mobile">Sandbox URL</th>
                         <th>Description</th>
-                        <th>Actions</th>
+                        <th></th>
                     </tr>
                     <tr>
                         <td>Gateway</td>
@@ -55,8 +57,8 @@
                         <td class="hide-in-mobile">https://dlc-test.gflesch.com/</td>
                         <td>Logistics workflow tool</td>
                         <td>
-                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Edit App</a>
-                            <a class="edit" href="../2/permissions-edit-dlc.html">Edit Permissions</a>
+                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Details</a>
+                            <a class="edit" href="../2/permissions-edit-dlc.html">User Permissions</a>
                         </td>
                     </tr>
                     <tr>
@@ -66,8 +68,8 @@
                         <td class="hide-in-mobile"></td>
                         <td>Portal for viewing and pushing sales orders from Autotask</td>
                         <td>
-                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Edit App</a>
-                            <a class="edit" href="../2/permissions-edit-dlc.html">Edit Permissions</a>
+                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Details</a>
+                            <a class="edit" href="../2/permissions-edit-dlc.html">User Permissions</a>
                         </td>
                     </tr>
                     <tr>
@@ -77,8 +79,74 @@
                         <td class="hide-in-mobile">http://dashboards-test.gflesch.com/</td>
                         <td>A collection of dashboards used by the IS and Contracts teams</td>
                         <td>
-                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Edit App</a>
-                            <a class="edit" href="../2/permissions-edit-dlc.html">Edit Permissions</a>
+                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Details</a>
+                            <a class="edit" href="../2/permissions-edit-dlc.html">User Permissions</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gateway</td>
+                        <td class="hide-in-mobile"></td>
+                        <td>https://dlc.gflesch.com/</td>
+                        <td class="hide-in-mobile">https://dlc-test.gflesch.com/</td>
+                        <td>Logistics workflow tool</td>
+                        <td>
+                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Details</a>
+                            <a class="edit" href="../2/permissions-edit-dlc.html">User Permissions</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sales Order Dashboard</td>
+                        <td class="hide-in-mobile"></td>
+                        <td>https://sodashboard.gflesch.com/</td>
+                        <td class="hide-in-mobile"></td>
+                        <td>Portal for viewing and pushing sales orders from Autotask</td>
+                        <td>
+                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Details</a>
+                            <a class="edit" href="../2/permissions-edit-dlc.html">User Permissions</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GFC Dashboards</td>
+                        <td class="hide-in-mobile">prod-web02</td>
+                        <td>https://dashboards.gflesch.com/</td>
+                        <td class="hide-in-mobile">http://dashboards-test.gflesch.com/</td>
+                        <td>A collection of dashboards used by the IS and Contracts teams</td>
+                        <td>
+                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Details</a>
+                            <a class="edit" href="../2/permissions-edit-dlc.html">User Permissions</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gateway</td>
+                        <td class="hide-in-mobile"></td>
+                        <td>https://dlc.gflesch.com/</td>
+                        <td class="hide-in-mobile">https://dlc-test.gflesch.com/</td>
+                        <td>Logistics workflow tool</td>
+                        <td>
+                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Details</a>
+                            <a class="edit" href="../2/permissions-edit-dlc.html">User Permissions</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sales Order Dashboard</td>
+                        <td class="hide-in-mobile"></td>
+                        <td>https://sodashboard.gflesch.com/</td>
+                        <td class="hide-in-mobile"></td>
+                        <td>Portal for viewing and pushing sales orders from Autotask</td>
+                        <td>
+                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Details</a>
+                            <a class="edit" href="../2/permissions-edit-dlc.html">User Permissions</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GFC Dashboards</td>
+                        <td class="hide-in-mobile">prod-web02</td>
+                        <td>https://dashboards.gflesch.com/</td>
+                        <td class="hide-in-mobile">http://dashboards-test.gflesch.com/</td>
+                        <td>A collection of dashboards used by the IS and Contracts teams</td>
+                        <td>
+                            <a class="edit" href="../2/applications-edit-dlc__apps-info.html">Details</a>
+                            <a class="edit" href="../2/permissions-edit-dlc.html">User Permissions</a>
                         </td>
                     </tr>
                 </table>

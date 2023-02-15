@@ -27,7 +27,7 @@ body {
     box-sizing: border-box;
     font-family: "Lato",sans-serif;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.7;
     color: #00539b;
     background-color: #eaeaea;
@@ -203,17 +203,37 @@ h1 {
 
 
 
-/*---------------------- CONTENT HEADER --------------------*/
-.content-header {
-    display: flex;
-    margin: 2rem auto 1rem auto;
+/*---------------------- CONTENT HEADER /FOOTER--------------------*/
+.content-header,
+.content-footer {
+    display: grid;
+    grid-template-columns: auto auto;
     width: 90vw;
 }
 
-.content-header > div {
+.content-header {
+    margin: 2rem auto 1rem auto;
+}
+
+.content-footer {
+    margin: 1rem auto 2rem auto;
+}
+
+.content-header > .header-left,
+.content-footer > .footer-left {
+    display: flex;
+}
+
+.content-header .labeled-field {
     display: flex;
     flex-direction: column;
-    margin: 0 0.75rem;
+    padding-right: 0.4rem;
+}
+
+.content-header > .header-right,
+.content-footer > .footer-right {
+    display: flex;
+    justify-self: flex-end;
 }
 
 .content-header input,
@@ -262,6 +282,10 @@ h1 {
     border: 1px solid #00539b;
     background-color: #00539b;
     color: #eaeaea;
+}
+
+.save-btn {
+    margin-right: 0;
 }
 
 .delete-btn {
@@ -382,15 +406,17 @@ h1 {
 /*---------------------- USERS - EDIT --------------------*/
 .content-body__user-edit {
     padding: 0;
-    height: auto;
+    max-height: 75vh;
     display: grid;
-    grid-template-columns: auto 70vw;
-    grid-template-rows: 65vh;
+    grid-template-columns: 15rem 15rem auto;
+    grid-template-rows: auto;
     border: 1px solid #c6c6c6;
-    margin-top: 1rem;
+    margin: 1rem 5vw;
+    overflow: auto;
 }
 
 .content-title {
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -400,17 +426,32 @@ h1 {
     color: #1878cd;
 }
 
-.user-edit__nav {
-    grid-column-start: 1;
-    grid-column-end: 2;
+.user-edit__app-nav {
+    grid-column: 1;
     border-right: 1px solid #c6c6c6;
+    width: 15rem;
 }
 
-.user-edit__nav li {
+.user-edit__module-nav {
+    grid-column: 2;
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+    width: 15rem;
+}
+
+.user-edit__app-nav h4,
+.user-edit__module-nav h4 {
+    text-align: center;
+    padding: 0.5rem 0.2rem;
+}
+
+.user-edit__app-nav li,
+.user-edit__module-nav li {
     list-style: none;
 }
 
-.user-edit__nav li a {
+.user-edit__app-nav li a,
+.user-edit__module-nav li a {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -420,8 +461,10 @@ h1 {
     transition: all 0.2s
 }
 
-.user-edit__nav li a:hover,
-.user-edit__nav__active {
+.user-edit__app-nav li a:hover,
+.user-edit__app-nav li a.user-edit__nav__active,
+.user-edit__module-nav li a:hover,
+.user-edit__module-nav li a.user-edit__nav__active {
     background-color: #f6f6f6;
     color: #1878cd;
 }
@@ -431,10 +474,56 @@ h1 {
 }
 
 
+.user-edit__permassign {
+    background-color: #f6f6f6;
+    grid-column: 3;
+}
+
+.user-edit__perms {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    margin: 0 1.5rem 1rem 1.5rem;
+}
+
+.user-edit__perms h3 {
+    align-self: center;
+    margin-top: 1.5rem;
+}
+
+.user-edit__perms-container {
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.user-edit__permgroup {
+
+}
+
+.user-edit__perms-container h4 {
+    padding: 0.5rem 1.5rem;
+}
+
+.user-edit__perms-container ul {
+    padding-left: 3rem;
+}
+
+.user-edit__perms-container li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.user-edit__perms-container li span {
+    padding-left: 1rem;
+}
+
+
 
 /*---------------------- PERMISSIONS --------------------*/
 
-.permission-group {
+/* .permission-group {
     display: flex;
     flex-direction: column;
     margin: 0 auto 1rem auto;
@@ -449,12 +538,12 @@ h1 {
 
 .permission li {
     list-style-type: none;
-}
+} */
 
 
 
 /*---------------------- APPLICATIONS --------------------*/
-.content-body__edit-roles {
+.content-body__edit-perms {
     display: flex;
     flex-direction: column;
     margin: 0 auto 1rem auto;
@@ -463,11 +552,11 @@ h1 {
     width: 100%;
 }
 
-.content-body__edit-roles h2 {
+.content-body__edit-perms h2 {
     margin: 0 auto 1rem auto;
 }
 
-.content-body__edit-roles__panels {
+.content-body__edit-perms__panels {
     display: flex;
     flex-direction: row;
 }
@@ -487,9 +576,11 @@ h1 {
 .apps-edit {
     display: grid;
     grid-template-columns: auto 70vw;
-    grid-template-rows: 65vh;
+    grid-template-rows: auto;
+    height: 70vh;
+    overflow: auto;
     border: 1px solid #c6c6c6;
-    margin-top: 1rem;
+    margin: 1rem;
 }
 
 .apps-edit__nav {
@@ -515,6 +606,7 @@ h1 {
 .apps-edit__nav li a:hover,
 .apps-edit__nav__active {
     background-color: #f6f6f6;
+    border: none;
     color: #1878cd;
 }
 
@@ -528,6 +620,7 @@ h1 {
     width: 100%;
 }
 
+/**************** Edit App Info ****************/
 .editor__format {
     overflow: auto;
 }
@@ -559,75 +652,157 @@ h1 {
     }
 }
 
-/**-- PERMISSION GROUP EDITING WINDOW --**/
+/********************** Modules Page ************************/
+.apps-edit__modules-and-perms:last-child {
+    margin-bottom: 2rem;
+}
 
-.apps-edit__permassign {
-    background-color: #f6f6f6;
-    grid-column-start: 2;
-    grid-column-end: 3;
+.apps-edit__modules-and-perms h3 {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+
+
+/*---------------------- APPLICATIONS - EDIT PERMS --------------------*/
+
+.edit-perms__users-panel {
     display: flex;
+    flex-direction: column;
+    width: 45vw;
+    height: 70vh;
+    border: 1px solid #c6c6c6;
+    overflow: auto;
+}
+
+.edit-perms__users-panel__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+
+.edit-perms__users-panel__header > div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.75rem;
+}
+
+.edit-perms__users-panel__header input,
+.edit-perms__users-panel__header select {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+    color: #142a3d;
+}
+
+.edit-perms__users-panel table {
+    border-collapse: collapse;
     width: 100%;
 }
 
-.apps-edit__all-perms {
-    width: 50%;
+.edit-perms__users-panel table th {
+    padding: 1rem 1rem;
+    text-align: left;
+    background-color: #d5d5d5;
+}
+
+.edit-perms__users-panel table td {
+    transition: all 0.2s;
+    height: 100%;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+
+.edit-perms__users-panel table tr:hover td,
+.user-row__active {
+    background-color: #f6f6f6;
+    color: #1878cd;
+}
+
+.edit-perms__roles-panel {
+    width: 45vw;
+    height: 70vh;
+    border-top: 1px solid #c6c6c6;
     border-right: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+    overflow: auto;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    align-items: center;
 }
 
-.apps-edit__available-perms {
-    width: 50%;
-    /* border-left: 1px solid #c6c6c6; */
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-}
-
-.apps-edit__all-perms h3,
-.apps-edit__available-perms h3 {
-    align-self: center;
+.edit-perms__roles-panel h3 {
     margin-top: 1rem;
 }
 
-.apps-edit__all-perms__dragover,
-.apps-edit__available-perms__dragover {
-    height: -webkit-fill-available;
+.edit-perms__roles-panel__perms-by-module {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: -webkit-fill-available;
+}
+
+.edit-perms__roles-panel__perms-by-module:last-child {
+    margin-bottom: 2rem;
+}
+
+
+
+/*---------------------- Collapsible Module Headers --------------------*/
+.edit-perms__permgroup {
+    display: grid;
+    grid-template-columns: auto min-content;
+    align-items: center;
 }
 
 .permgroup {
     margin: 1rem auto;
-    max-width: 80%;
+    width: 80%;
     overflow-wrap: break-word;
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    background-color: #f6f6f6;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 .toggle {
     display: none;
 }
 
-.toggle:checked + .lbl-toggle + .collapsible-content {
-    max-height: 40rem;
-    overflow: auto;
-}
-
 .lbl-toggle {
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     cursor: pointer;
     border-radius: 0.5rem;
-    transition: all 0.5s ease-out;
-    background-color: #00539b;
+    transition: all 0.2s ease-out;
+    background-color: #517fa8;
     color: #eaeaea;
 }
 
 .lbl-toggle:hover {
-    background-color: #1878cd;
+    background-color: #6593bc;
     color: #fff;
 }
 
-.lbl-toggle::before {
+.lbl-toggle input,
+.content-inner input {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.lbl-toggle input {
+    margin-right: 1rem;
+}
+
+.collapsible-title::before {
     content: '';
     display: inline-block;
     border-top: 0.5rem solid transparent;
@@ -639,8 +814,14 @@ h1 {
     transition: transform .2s ease-out;
 }
 
-.toggle:checked + .lbl-toggle::before {
-    transform: rotate(90deg) translateX(-0.3rem);
+/* When "checkbox" (module header) is checked */
+.toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 40rem;
+    overflow: auto;
+}
+
+.toggle:checked + .lbl-toggle > .collapsible-title::before {
+    transform: rotate(90deg) translateX(-0.1rem);
 }
 
 .toggle:checked + .lbl-toggle {
@@ -648,194 +829,79 @@ h1 {
     border-bottom-left-radius: 0;
 }
 
-.collapsible-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-    background-color: #eaeaea;
+/* collapsible window formatting */
+.content-inner {
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    padding: 0;
 }
 
-.collapsible-content .content-inner {
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    padding: .5rem 1rem;
-    overflow: hidden;
+.content-inner h4 {
+    padding: 0.5rem 2rem;
 }
 
 .content-inner li {
     list-style: none;
-}
-
-@media only screen and (max-width: 56.25em) {
-    
-    .apps-edit__permassign {
-        flex-direction: column;
-    }
-
-    .apps-edit__all-perms {
-        border-right: none;
-        border-bottom: 1px solid #eaeaea;
-        width: 100%;
-        height: 50%;
-    }
-
-    .apps-edit__available-perms {
-        border-left: none;
-        border-top: 1px solid #eaeaea;
-        width: 100%;
-        height: 50%;
-    }
-
-}
-
-
-
-/*---------------------- APPLICATIONS - EDIT PERMS --------------------*/
-
-.edit-roles__users-panel {
-    display: flex;
-    flex-direction: column;
-    width: 45vw;
-    height: 70vh;
-    border: 1px solid #c6c6c6;
-    overflow: auto;
-}
-
-.edit-roles__roles-panel {
-    display: block;
-    width: 45vw;
-    height: 70vh;
-    border: 1px solid #c6c6c6;
-    overflow: auto;
-}
-
-.edit-roles__roles-panel h3 {
-    margin-top: 1rem;
-}
-
-.edit-roles__users-panel__header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: 1rem 0;
-}
-
-.edit-roles__users-panel__header > div {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0.75rem;
-}
-
-.edit-roles__users-panel__header input,
-.edit-roles__users-panel__header select {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: 1px solid #d5d5d5;
-    color: #142a3d;
-}
-
-.edit-roles__users-panel table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.edit-roles__users-panel table th {
-    padding: 1rem 1rem;
-    text-align: left;
-    background-color: #d5d5d5;
-}
-
-.edit-roles__users-panel table td {
-    transition: all 0.2s;
-    height: 100%;
-    padding: 0.75rem 1rem;
-    cursor: pointer;
-}
-
-.edit-roles__users-panel table tr:hover td,
-.user-row__active {
-    background-color: #f6f6f6;
-    color: #1878cd;
-}
-
-.edit-roles__roles-panel  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.edit-roles__roles-panel__available-perms {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    width: -webkit-fill-available;
-}
-
-.edit-roles__permgroup {
-    display: grid;
-    grid-template-columns: auto min-content;
-    align-items: center;
-}
-
-.edit-roles__permgroup input {
-    height: 15px;
-    width: 15px;
-    margin-right: 1rem;
-}
-
-.edit-roles__permgroup .collapsible-content {
-    background-color: #f6f6f6;
-}
-
-.edit-roles__permgroup .content-inner {
-    padding: 0;
-}
-
-.edit-roles__permgroup li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.2s;
-    padding: 0.75rem 2rem;
+    padding: 0.75rem 2rem 0.75rem 2rem;
 }
 
-.edit-roles__permgroup li:hover {
+.content-inner li.indented {
+    padding-left: 4rem;
+}
+
+.content-inner li:hover {
     background-color: #fff;
     color: #1878cd;
-}
+} 
+
+
+
+/*---------------------- Responsive Styling --------------------*/
 
 @media only screen and (max-width: 88.125em) {
-    .edit-roles__users-panel__header input,
-    .edit-roles__users-panel__header select {
+    .edit-perms__users-panel__header input,
+    .edit-perms__users-panel__header select {
         max-width: 20vw;
     }
 }
 
 
 @media only screen and (max-width: 75em) {
-    .edit-roles__users-panel__header input,
-    .edit-roles__users-panel__header select {
+    .edit-perms__users-panel__header input,
+    .edit-perms__users-panel__header select {
         font-size: inherit;
     }
+}
 
-    .content-body__edit-roles__panels {
+@media only screen and (max-width: 65.3125em) { 
+    .content-body__edit-perms__panels {
         flex-direction: column;
         margin: 0 auto;
     }
 
-    .edit-roles__users-panel {
+    .edit-perms__users-panel {
         width: 80vw;
         height: 30vh;
         margin: 0.5rem auto 0 auto;
     }
     
-    .edit-roles__roles-panel {
+    .edit-perms__roles-panel {
         width: 80vw;
         height: 40vh;
         margin: 0 auto 0.5rem auto;
+        border-top: none;
+        border-left: 1px solid #c6c6c6;
     }
 }
 
+@media only screen and (max-width: 56.25em) {
+
+
+}
 

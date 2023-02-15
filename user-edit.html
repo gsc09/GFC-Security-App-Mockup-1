@@ -6,22 +6,22 @@
         <link rel="stylesheet" href="../2/styles.css">
         <script type="text/javascript" src="../2/javascript/script.js"></script>
         <link rel="icon" type="image/x-icon" href="../2/assets/logo.png">
-        <title>App Permissions - 2</title>
+        <title>App Permissions</title>
     </head>
     <body>
         <div class="header-bar">
             <div class="header-branding">
                 <img class="logo" src="../2/assets/logo_gray.png" title="Hello" />
-                <h1 class="site-header">App Permissions 2</h1>
+                <h1 class="site-header">App Permissions</h1>
                 
             </div>
             <nav class="header-nav">
                 <a title="Users" class="navbar__active" href="../2/users.html">
                     Users
                 </a>
-                <a title="Permissions" href="../2/permissions.html">
+                <!-- <a title="Permissions" href="../2/permissions.html">
                     Permissions
-                </a>
+                </a> -->
                 <a title="Applications" href="../2/applications.html">
                     Applications
                 </a>
@@ -34,23 +34,17 @@
         
         <div class="content">
 
-            <div class="content-header">
-                <a class="cancel-btn" type="button" href="../2/users.html">Cancel</a>
-                <a class="save-btn" type="button" href="../2/users.html">Save</a>
-                <a class="delete-btn" type="button" href="../2/users.html">Delete</a>
-            </div>
-
             <div class="content-title">
-                <h3>Bilbo Baggins</h3>
-                <h4>bbaggins</h4>
+                <h2>App Permissions for Bilbo Baggins</h2>
             </div>
 
             <div class="content-body content-body__user-edit">
-                <div class="user-edit__nav">
+                <div class="user-edit__app-nav">
+                    <h4>Applications</h4>
                     <nav>
                         <ul>
                             <li>
-                                <a href="" class="apps-edit__nav__active">Gateway</a>
+                                <a href="" class="user-edit__nav__active">Gateway</a>
                             </li>
                             <li>
                                 <a href="">Sales Order Dashboard</a>
@@ -61,71 +55,79 @@
                         </ul>
                     </nav>
                 </div>
+                <div class="user-edit__module-nav">
+                    <h4>Modules</h4>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="">DIT Summary</a>
+                            </li>
+                            <li>
+                                <a href="">DSS Summary</a>
+                            </li>
+                            <li>
+                                <a href="" class="user-edit__nav__active">Scheduler</a>
+                            </li>
+                            <li>
+                                <a href="">Shop Summary</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
-                <div class="apps-edit__permassign">
+                <div class="user-edit__permassign">
 
-                    <div class="apps-edit__all-perms">
-                        <h3>All Permissions</h3>
-                    
-                        <div class="apps-edit__all-perms__dragover" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="user-edit__perms">
+                        <h3>Permissions</h3>
 
-                            <div class="permgroup" id="permgroup1" draggable="true" ondragstart="drag(event)">
-                                <div class="collapsible">
-                                    <input id="collapsible1" class="toggle" type="checkbox">
-                                    <label for="collapsible1" class="lbl-toggle" tabindex="0">Gateway Scheduler</label>
-                                    <div class="collapsible-content">
-                                        <div class="content-inner">
-                                            <ul>
-                                                <li>Add event</li>
-                                                <li>Delete event</li>
-                                                <li>Edit event</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="user-edit__perms-container">
+                            <div class="user-edit__permgroup">
+                                <h4>Editing Events</h4>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox">
+                                        <span>Add event</span>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox">
+                                        <span>Delete event</span>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox">
+                                        <span>Modify event</span>
+                                    </li>
+                                </ul>
                             </div>
-                        
-                            <div class="permgroup" id="permgroup2" draggable="true" ondragstart="drag(event)">
-                                <div class="collapsible">
-                                    <input id="collapsible2" class="toggle" type="checkbox">
-                                    <label for="collapsible2" class="lbl-toggle" tabindex="0">DIT Summary</label>
-                                    <div class="collapsible-content">
-                                        <div class="content-inner">
-                                            <ul>
-                                                <li>View</li>
-                                                <li>Edit</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="permgroup" id="permgroup3" draggable="true" ondragstart="drag(event)">
-                                <div class="collapsible">
-                                    <input id="collapsible3" class="toggle" type="checkbox">
-                                    <label for="collapsible3" class="lbl-toggle" tabindex="0">Contracts</label>
-                                    <div class="collapsible-content">
-                                        <div class="content-inner">
-                                            <ul>
-                                                <li>Permission 1</li>
-                                                <li>Permission 2</li>
-                                                <li>Permission 3</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+
+                            <div class="user-edit__permgroup">
+                                <h4>Viewing Events</h4>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox">
+                                        <span>All DSS</span>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox">
+                                        <span>All trucks</span>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox">
+                                        <span>All branches</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-
                     </div>
+                </div>
+            </div>
 
-                    <div class="apps-edit__available-perms">
-                        <h3>Applied Permissions</h3>
-
-                        <div class="apps-edit__available-perms__dragover" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        
-                        </div>
-                    </div>
+            <div class="content-footer">
+                <div class="footer-left">
+                    <a class="delete-btn" type="button" href="../2/users.html">Delete</a>
+                </div>
+                <div class="footer-right">
+                    <a class="cancel-btn" type="button" href="../2/users.html">Cancel</a>
+                    <a class="save-btn" type="button" href="../2/users.html">Save</a>
                 </div>
             </div>
 
